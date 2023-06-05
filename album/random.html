@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>隨機食譜</title>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sidebars.css">
+    <link rel="stylesheet" type="text/css" href="random.css">
+    <link href="../bubble.css" rel="stylesheet">
+
+<body>
+
+    <!-- 氣泡窗 -->
+    <div class="fixed-button">
+        <a href="Ingredients.html">
+            <img src="icons8-open-book-50.png" alt="Button">
+            <div class="cart-badge">0</div>
+        </a>
+    </div>
+
+    <div class="container">
+        <!-- sidebar -->
+        <div id="sidebar">
+            <h2 class="sidebar-title"><br></h2>
+            <ul class="sidebar-links">
+                <li><a href="index528.html">首頁</a></li>
+                <li><a href="Ingredients.html">食材計算</a></li>
+                <li><a href="random.html">隨機食譜</a></li>
+                <li><a href="#">連結 4</a></li>
+            </ul>
+
+        </div>
+        <div id="page">
+            <!-- 展開按鈕 -->
+            <div id="toggle-button">展<br>開</div>
+            <div class="flex">
+                <div class="CMealThumb" ></div>
+                <div class="CMeal leftmg"></div>
+                <p class="leftmg blue add" style="visibility:hidden">加入收藏</p>
+            </div>
+
+            <div class="CCategory"></div>
+            <div class="CArea"></div>
+            <div class="Cinstruction"></div>
+
+            <div class="CYtVideo"></div>
+            <div class="CIngredient"></div>
+            <div class="CMeasure"></div>
+            <div id="player"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="sidebars.js"></script>
+        <script src="random.js"></script>
+</body>
+
+</html>

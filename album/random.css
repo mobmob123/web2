@@ -1,0 +1,39 @@
+/* 將圖片顯示在網頁最上端 */
+.CMealThumb img{
+    display: block;
+    /* margin: 0 auto; */
+  }
+
+.flex{
+    display: flex;
+}
+
+  /* 菜名粗體字 */
+  .CMeal p{
+    font-weight: bold;
+  }
+  
+  /* 食材種類與數量 */
+  .CCategory p{
+    margin-top: 10px;
+  }
+  
+  /* 料理步驟 */
+  .Cinstruction{
+    margin-top: 20px;
+  }
+  
+  .Cinstruction p{
+    margin-bottom: 10px;
+  }
+
+  .leftmg{
+    margin-left: 10px;
+  }
+
+  .blue{
+    color: blue;
+  }
+
+  
+ 
