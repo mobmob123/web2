@@ -103,14 +103,14 @@ let ontto100 =`
   </select>`
 $(getdata(function(data){
     for(let i=0;i<data.recipes.length;i++){
-        let tlist=$(".flex");
+        let tlist=$(".container2");
         let ttext;
-        ttext=`<div class="myblock"><p>`+data.recipes[i].title+`</p></div> <div class='right del' onclick="deleteRecipe(${i})">刪除</div>`
+        ttext=`<div class="flex"><div class="red"><p>`+data.recipes[i].title+`</p></div> <div class='right blue' onclick="deleteRecipe(${i})">刪除</div>`
         for( let j=0;j<data.recipes[i].ingredient.length;j++){
             ttext+=`<div class='left'>`+data.recipes[i].ingredient[j]+`</div>`;
-            ttext+=`<div class='right N${i}' >`+my(data.recipes[i].measure[j])+`</div><br>`;
+            ttext+=`<div class='right N small ${i}' >`+my(data.recipes[i].measure[j])+`</div><br>`;
         }
-        ttext+=""+`<label for="${i}">份數:</label><select class="N${i}">`+ontto100+"</div><hr>"
+        ttext+=""+`<label for="${i}">份數:</label><select class="N${i}">`+ontto100+"</div><hr><div>"
         tlist.append(ttext);
     }
  }
@@ -131,7 +131,7 @@ function my(data){
     }
 
 }
-
+//單位換算
  function processString(str) {
     var result = { quantity: undefined, unit: undefined };
   

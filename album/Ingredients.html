@@ -7,26 +7,34 @@
     <link rel="stylesheet" type="text/css" href="sidebars.css">
     <link href="../bubble.css" rel="stylesheet">
     <style>
+        
+        .flex{
+            border: 2px solid ;
+            border-style: dashed;
+        }
+        .small{
+            font-size: small;   
+        }
         .left{
             text-align: left;
         }
         .right{
             text-align: right;
         }
-        .myblock{
+        .red{
             font-size: large;
             color: brown;
         }
-        .del{
+        .blue{
             color: blue;
             font-size: small;   
         }
-        .del:hover{
+        .blue:hover{
             cursor: pointer;
         }
     </style>
 <body>
-
+    <button class="mybutton" onclick="clearCart()" style="margin-left: 40px;">清空食譜</button>
     <!-- 氣泡窗 -->
     <div class="fixed-button">
         <a href="Ingredients.html">
@@ -50,8 +58,10 @@
         <div id="page">
             <!-- 展開按鈕 -->
             <div id="toggle-button">展<br>開</div>
-            <div class="flex">
-                  
+            <div class="container2">
+                
+                  <!-- append -->
+                
             </div>
         </div>
 

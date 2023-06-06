@@ -59,8 +59,8 @@ function getdata(callback){
 }
 
 function clearCart() {
-  const cart = { recipe: [] };
-  saveCartToLocalStorage(cart);
+  localStorage.removeItem("cart");
+  location.reload();
 }
 
 function deleteRecipe(i){
