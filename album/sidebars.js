@@ -64,10 +64,30 @@ function clearCart() {
 }
 
 function deleteRecipe(i){
-  // data = loadCartFromLocalStorage();
-  // console.log(data);
-  // data=data.recipes.splice(i, 1);
-  // console.log(data);
-  // // saveCartToLocalStorage(data);
-  // //location.reload();
+let temp = loadCartFromLocalStorage();
+
+console.log((i));
+
+
+temp.recipes.splice(i, 1);
+
+saveCartToLocalStorage(temp);
+
+location.reload();
 }
+
+
+document.addEventListener('click', handleClick);
+
+function handleClick(event) {
+  // 檢查點選的目標是否是<div id="a">
+  if (event.target.id !== "toggle-button") {
+    // 執行你的函數
+    $(".container").removeClass("sidebar-expanded");
+  }
+  if (event.target.id !== "popup" && !event.target.closest('.col')) {
+     hidePopup();
+  }
+}
+
+

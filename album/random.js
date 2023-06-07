@@ -32,7 +32,7 @@ $.getJSON(random, function (recipe) {
 
   $(".CMeal").append(`<p>${Meal}</p>`);
   $(".CCategory").append(`<p>${Category}</p>`);
-  $(".CMealThumb").append(`<img src="${MealThumb}" height="300 px"></img>`);
+  $(".CMealThumb").append(`<img  style=" margin-left: 0%;" src="${MealThumb}" height="300 px"></img>`);
   //處理換行問題
   $(".Cinstruction").append(instruction.replace(/\r\n/g, "<br>"));
   pageloaded()
@@ -60,8 +60,8 @@ function onYouTubeIframeAPIReady() {
       'playsinline': 1
     },
     events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
+      'onReady': onPlayerReady, 
+      // 'onStateChange': onPlayerStateChange
     }
   });
 }

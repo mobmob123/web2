@@ -108,9 +108,9 @@ $(getdata(function(data){
         ttext=`<div class="flex"><div class="red"><p>`+data.recipes[i].title+`</p></div> <div class='right blue' onclick="deleteRecipe(${i})">刪除</div>`
         for( let j=0;j<data.recipes[i].ingredient.length;j++){
             ttext+=`<div class='left'>`+data.recipes[i].ingredient[j]+`</div>`;
-            ttext+=`<div class='right N small ${i}' >`+my(data.recipes[i].measure[j])+`</div><br>`;
+            ttext+=`<div class='right N${i} small' >`+my(data.recipes[i].measure[j])+`</div><br>`;
         }
-        ttext+=""+`<label for="${i}">份數:</label><select class="N${i}">`+ontto100+"</div><hr><div>"
+        ttext+=""+`<label for="N${i}">份數:</label><select style=" margin-bottom: 0px;"id="N${i} ">`+ontto100+"</div><hr></div>"
         tlist.append(ttext);
     }
  }
@@ -157,12 +157,11 @@ function my(data){
 
   $("select").change(function (e) { 
     var selectedOption = $(this).val(); // 獲取被選中的選項的值
-    var selectedText = $(this).find("option:selected").text(); 
-    var cn = $(this).attr("class").split('N')[1];
+    var selectedText = $(this).find("option:selected").text();
    
+    var cn = $(this).attr("id").split('N')[1];
 
     $.each($(`div.N${cn}`), function (indexInArray, valueOfElement) { 
-        console.log("hi");
         var $valueOfElement = $(valueOfElement); // Wrap the DOM element in a jQuery object
         let ttex=$valueOfElement.find(".num").attr('org');
         $valueOfElement.find(".num").text(ttex*selectedText);
@@ -180,3 +179,5 @@ function my(data){
     //   });
     
   });
+
+

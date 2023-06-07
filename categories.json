@@ -29,7 +29,7 @@
         "idCategory": "5",
         "strCategory": "Miscellaneous",
         "strCategoryThumb": "https://www.themealdb.com/images/category/miscellaneous.png",
-        "strCategoryDescription": "General foods that don't fit into another category"
+        "strCategoryDescription": "General foods that don't fit into another category.        "
       },
       {
         "idCategory": "6",
